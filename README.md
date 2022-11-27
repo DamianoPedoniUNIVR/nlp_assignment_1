@@ -33,5 +33,5 @@ not-eng |  10<585>|
 (row = reference; col = test)
 ```
 
-### - Usage as a probabilistic language model
+#### - Usage as a probabilistic language model
 A Probabilistic Language Model assigns a probability to every sentence in such a way that more likely english sentences get an higher probability. This classifier can be easily used as a Probabilistic Language Model, since we can calculate the percentage of english tokens inside a phrase and so the probability.
