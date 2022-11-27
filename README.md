@@ -1,7 +1,7 @@
 ## Assignment 1 - Natural Language Processing
 ### Development in NLTK of a Naive Bayes Classifier able to detect a single class in one of the corpora available by distinguishing english and not-english.
 
-A link to the code can be found [here](https://github.com/DamianoPedoniUNIVR/nlp_assignment_1)
+A link to the code can be found [here](https://github.com/DamianoPedoniUNIVR/nlp_assignment_1), or visiting this url: https://github.com/DamianoPedoniUNIVR/nlp_assignment_1
 
 #### - Corpus
 I've used the NLTK package and the europarl_raw set of corpus. The classifier is trained with english, german, italian, french and dutch languages.
