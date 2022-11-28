@@ -19,14 +19,13 @@ The pipeline of this model is very straight forward:<br>
 #### - Train, test and performance
 I've used a 5:1 split between training and testing sets, which gives us almost 4000 phrases for training and almost 900 for testing purphoses.
 
-With this split setup, I've achieved this results:
-```
-- Accuracy (how many times the model was correct overall):  0.9897540983606558
-- Eng precision (how good the model is at predicting the positive category):  0.9744245524296675
-- Not-eng precision (how good the model is at predicting the negative category):  1.0
-- Eng recall (how many times the model was able to detect the positive category):  1.0
-- Not-eng recall (how many times the model was able to detect the negative category):  0.9831932773109243
-```
+With this split setup, I've achieved this results:<br>
+- Accuracy (how many times the model was correct overall):  0.9897540983606558<br>
+- Eng precision (how good the model is at predicting the positive category):  0.9744245524296675<br>
+- Not-eng precision (how good the model is at predicting the negative category):  1.0<br>
+- Eng recall (how many times the model was able to detect the positive category):  1.0<br>
+- Not-eng recall (how many times the model was able to detect the negative category):  0.9831932773109243<br>
+
 
 With this confusion matrix:
 ```
