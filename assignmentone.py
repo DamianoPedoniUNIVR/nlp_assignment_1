@@ -62,14 +62,15 @@ def generate_stopwords():
     for lang in stopwords.fileids():
         stopwords_universal += stopwords.words(lang)
 
-if __name__ == "__main__":
 
+if __name__ == "__main__":
     # generating the stopwords list
     generate_stopwords()
 
     # processing english phrases
     print("Processing english phrases...")
     for language in e_languages:
+        # using a tenth of the set available
         sentences = language.sents()[:int(len(language.sents()) / 10)]
         words = []
         for line in tqdm(sentences, total=len(sentences)):
@@ -77,6 +78,7 @@ if __name__ == "__main__":
             words += removeStopWordsAndTokenize(phrase)
             labeled_phrases.append((phrase, "eng"))
 
+        # using just the 50% of the most common tokens
         mc = nltk.FreqDist(words).most_common(int(len(words) / 2))
         mc_list = [w for (w, o) in mc]
         all_words += mc_list
@@ -84,6 +86,7 @@ if __name__ == "__main__":
     # processing not english phrases
     print("Processing not-english phrases...")
     for language in ne_languages:
+        # using a thirtieth of the set available
         sentences = language.sents()[:int(len(language.sents()) / 30)]
         words = []
         for line in tqdm(sentences, total=len(sentences)):
@@ -91,6 +94,7 @@ if __name__ == "__main__":
             words += removeStopWordsAndTokenize(phrase)
             labeled_phrases.append((phrase, "not-eng"))
 
+        # using just the 50% of the most common tokens
         mc = nltk.FreqDist(words).most_common(int(len(words) / 2))
         mc_list = [w for (w, o) in mc]
         all_words += mc_list
