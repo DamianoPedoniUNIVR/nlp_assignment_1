@@ -8,23 +8,25 @@ I've used the NLTK package and the europarl_raw set of corpus. The classifier is
 To simplify the execution, I've used just a tenth of the english set and a thirtieth of each of the others languages sets. The positive class set is almost 2000 phrases long and the negative class one is almost 2800 phrases long, for a total of almost 15000 words of different languages.
 
 #### - The pipeline
-The pipeline of this model is very straight forward:
-1) I generate the stopwords list, by taking all the stopwords in all the languages supported by nltk.
-2) I process the english corpus. I'm using a tenth of the available sentences just to simplify the execution. Here I ignore the stopwords and tokenize each word in the sentence. After the tokenization process I proceed with stemming and lemmatization. Then I add each token in a list and label each phrase.
-3) I process each negative class language, as described above.
-4) I process each phrase found as described above, removing stopwords, using tokenization, stemming and lemmatization.
-5) I randomize the list to have uniform training and testing sets and to get each time a different result.
-6) I generate the features sets and proceed with training and testing.
+The pipeline of this model is very straight forward:<br>
+1) I generate the stopwords list, by taking all the stopwords in all the languages supported by nltk.<br>
+2) I process the english corpus. I'm using a tenth of the available sentences just to simplify the execution. Here I ignore the stopwords and tokenize each word in the sentence. After the tokenization process I proceed with stemming and lemmatization. Then I add each token in a list and label each phrase.<br>
+3) I process each negative class language, as described above.<br>
+4) I process each phrase found as described above, removing stopwords, using tokenization, stemming and lemmatization.<br>
+5) I randomize the list to have uniform training and testing sets and to get each time a different result.<br>
+6) I generate the features sets and proceed with training and testing.<br>
 
 #### - Train, test and performance
 I've used a 5:1 split between training and testing sets, which gives us almost 4000 phrases for training and almost 900 for testing purphoses.
 
 With this split setup, I've achieved this results:
+```
 - Accuracy (how many times the model was correct overall):  0.9897540983606558
 - Eng precision (how good the model is at predicting the positive category):  0.9744245524296675
 - Not-eng precision (how good the model is at predicting the negative category):  1.0
 - Eng recall (how many times the model was able to detect the positive category):  1.0
 - Not-eng recall (how many times the model was able to detect the negative category):  0.9831932773109243
+```
 
 With this confusion matrix:
 ```
