@@ -33,6 +33,7 @@ not-eng |  10<585>|
 (row = reference; col = test)
 ```
 The most informative features found for one of the tests was:
+```
 state = True                   eng : not-en = 73.6 : 1.0
 presid = True                  eng : not-en = 72.4 : 1.0
 structur = True                eng : not-en = 64.6 : 1.0
@@ -43,7 +44,7 @@ nation = True                  eng : not-en = 35.2 : 1.0
 propos = True                  eng : not-en = 35.0 : 1.0
 object = True                  eng : not-en = 34.6 : 1.0
 issu = True                    eng : not-en = 32.1 : 1.0
-
+```
 
 #### - Usage as a probabilistic language model
 A Probabilistic Language Model assigns a probability to every sentence in such a way that more likely english sentences get an higher probability. This classifier can be easily used as a Probabilistic Language Model, since we can calculate the percentage of english tokens inside a phrase and so obtain the probability.
