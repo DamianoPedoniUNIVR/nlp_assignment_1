@@ -1,4 +1,5 @@
 ## Assignment 1 - Natural Language Processing
+##### Damiano Pedoni
 ### Development in NLTK of a Naive Bayes Classifier able to detect a single class in one of the corpora available by distinguishing english and not-english.
 
 A link to the code can be found [here](https://github.com/DamianoPedoniUNIVR/nlp_assignment_1), or visiting this url: https://github.com/DamianoPedoniUNIVR/nlp_assignment_1
